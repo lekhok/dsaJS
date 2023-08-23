@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Traversal</title>
+
+    <script>
+      let data = [23, 55, 66, 43, 2, 234, 345, 11, 244, 56, 7, 4, 21, 5]
+      for (i = 0; i < data.length; i++) {
+        document.write(`Element ${i + 1} : is  ${data[i]} <br>`)
+      }
+
+      const getElement = () => {
+        let inputElement = document.getElementById("element").value
+        inputElement < data.length + 1
+          ? alert(`Element is ${data[inputElement - 1]}`)
+          : alert("You have selected an element that doesnt exist")
+      }
+    </script>
+  </head>
+  <body>
+    <label for="element"> Enter Element: </label>
+    <input type="text" id="element" />
+    <button onclick="getElement()">Get Element</button>
+  </body>
+</html>

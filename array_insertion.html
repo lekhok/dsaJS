@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Insertion</title>
+    <script>
+      function onSubmit() {
+        let data = [2, 3, 4, 5, 6, 7, 8, 9]
+        let pos = document.getElementById("position").value
+        let newEl = document.getElementById("number").value
+
+        for (i = data.length - 1; i >= 0; i--) {
+          if (i >= pos) {
+            data[i + 1] = data[i]
+            if (i == pos) {
+              data[i] = newEl
+            }
+          }
+        }
+        console.log(data)
+      }
+    </script>
+  </head>
+  <body>
+    <br />
+    <label for="position">Enter Position</label>
+    <input
+      type="text"
+      placeholder="Enter Position"
+      id="position"
+      name="position"
+    />
+    <br />
+    <label for="position">Enter Number</label>
+    <input type="text" placeholder="Enter Number" id="number" name="number" />
+    <br />
+    <button type="button" onclick="onSubmit()">Submit</button>
+  </body>
+</html>

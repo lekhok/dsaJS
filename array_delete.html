@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let data = [2, 4, 5, 6, 8, 10]
+      console.log(data)
+      function onSubmit() {
+        let pos = document.getElementById("position").value
+        pos = parseInt(pos)
+        for (i = pos; i < data.length - 1; i++) {
+          data[i] = data[i + 1]
+        }
+        data.pop()
+        console.log(data)
+      }
+    </script>
+  </head>
+  <body>
+    <label for="position">Enter Position</label>
+    <input
+      type="text"
+      placeholder="Enter Position"
+      id="position"
+      name="position"
+    />
+    <button type="button" onclick="onSubmit()">Submit</button>
+  </body>
+</html>
